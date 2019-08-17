@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Light))]
 public class LightChanger : MonoBehaviour
 {
-    Light light;
+    new Light light = default;
 
     [SerializeField]
     bool on = false;
@@ -13,13 +13,13 @@ public class LightChanger : MonoBehaviour
     float interp;
 
     [SerializeField]
-    float onIntensity;
+    float onIntensity = default;
     [SerializeField]
-    float offIntensity;
+    float offIntensity = default;
     float targetIntensity;
     float startingIntensity;
     [SerializeField]
-    float transitionSpeed;
+    float transitionSpeed = default;
 
 
     void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CodeTriangle : MonoBehaviour
 {
     [SerializeField]
-    string shape;
+    string shape = "";
     private Mesh customMesh;
     void Start()
     {

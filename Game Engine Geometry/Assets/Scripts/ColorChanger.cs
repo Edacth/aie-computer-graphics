@@ -15,9 +15,9 @@ public class ColorChanger : MonoBehaviour
     Color newColor;
 
     [SerializeField]
-    Texture[] textures;
+    Texture[] textures= null;
     [SerializeField]
-    int textureIndex;
+    int textureIndex = default;
     int cachedTextureIndex;
 
     void Start()

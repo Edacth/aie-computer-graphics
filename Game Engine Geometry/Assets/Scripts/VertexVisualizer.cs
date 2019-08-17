@@ -11,7 +11,7 @@ public class VertexVisualizer : MonoBehaviour
     MeshRenderer mr;
     MeshFilter filter;
     [SerializeField]
-    bool enabled = true;
+    new bool enabled = true;
     
     void Start()
     {
