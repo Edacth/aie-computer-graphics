@@ -25,4 +25,8 @@ public class UnityChanUIScript : MonoBehaviour
         unityChanAnimator.SetFloat("Move Speed", slider.value);
     }
 
+    public void OnJumpButtonPress()
+    {
+        unityChanAnimator.SetTrigger("Jump");
+    }
 }
