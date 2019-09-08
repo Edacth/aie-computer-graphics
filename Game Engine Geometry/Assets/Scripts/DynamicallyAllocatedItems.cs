@@ -17,7 +17,8 @@ public class DynamicallyAllocatedItems : MonoBehaviour
         {
             GameObject newItem = Instantiate<GameObject>(prefab, content.transform);
             newItem.transform.GetChild(0).GetComponent<Text>().text = itemList[i].name;
-            newItem.transform.position = new Vector3(0, 50 * i, 0);
+            newItem.transform.GetChild(1).GetComponent<Text>().text = itemList[i].price.ToString();
+            newItem.transform.localPosition = new Vector3(0, -50 * i - 25, 0);
         }
     }
 
