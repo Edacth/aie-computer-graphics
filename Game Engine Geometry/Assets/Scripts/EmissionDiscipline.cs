@@ -24,11 +24,7 @@ public class EmissionDiscipline : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            emitterEnabled = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.R))
-        {
-            emitterEnabled = false;
+            emitterEnabled = !emitterEnabled;
         }
 
         if (emitterEnabled && timeSinceEmit >= emissionDelay)

@@ -8,6 +8,8 @@ public class ParticlePointAttractor : MonoBehaviour
     ParticleSystem[] particleSystems = default;
     [SerializeField]
     float radius = 1;
+    [SerializeField]
+    float intensity = 1;
     void Start()
     {
         
@@ -26,8 +28,8 @@ public class ParticlePointAttractor : MonoBehaviour
                 float distance = Vector3.Distance(particleArray[j].position, transform.position);
                 if (distance <= radius)
                 {
-                    //Debug.Log("Entered field");
-                    particleArray[j].position = Vector3.MoveTowards(particleArray[j].position, transform.position, 0.02f);
+                    Vector3 difference = transform.position - particleArray[j].position;
+                    particleArray[j].velocity += difference * intensity;
                     //particleArray[j].position = new Vector3(particleArray[j].position.x, particleArray[j].position.y, -1);
                     particleArray[j].startColor = Color.green;
                 }
