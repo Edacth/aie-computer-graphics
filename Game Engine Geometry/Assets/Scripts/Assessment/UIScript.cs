@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
 {
     DisplayItemScript _DisplayItemScript;
     UnityChanScript _UnityChanScript;
+    RainScript _RainScript;
     
     [SerializeField]
     private TMPro.TMP_Dropdown dropdownObject = default;
@@ -16,6 +17,7 @@ public class UIScript : MonoBehaviour
     {
         _DisplayItemScript = GetComponent<DisplayItemScript>();
         _UnityChanScript = GetComponent<UnityChanScript>();
+        _RainScript = GetComponent<RainScript>();
 
         for (int i = 0; i < _DisplayItemScript.getItemList().Length; i++)
         {
@@ -57,5 +59,18 @@ public class UIScript : MonoBehaviour
     public void OnRotateToggle(Toggle toggle)
     {
         _DisplayItemScript.SetRotationEnabled(toggle.isOn);
+    }
+
+    public void OnRainToggle(Toggle toggle)
+    {
+        if (toggle.isOn)
+        {
+            _RainScript.StartRain();
+        }
+        else
+        {
+            _RainScript.StopRain();
+        }
+        
     }
 }

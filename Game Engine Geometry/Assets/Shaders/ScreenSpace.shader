@@ -6,7 +6,7 @@
     SubShader {
       Tags { "RenderType" = "Opaque" }
       CGPROGRAM
-      #pragma surface surf Lambert
+      #pragma surface surf SimpleLambert
       struct Input {
           float2 uv_MainTex;
           float4 screenPos;
@@ -18,6 +18,15 @@
           float2 screenUV = IN.screenPos.xy / IN.screenPos.w;
           screenUV *= float2(8, 6);
           o.Albedo *= tex2D (_Detail, screenUV).rgb * 2;
+      }
+
+      half4 LightingSimpleLambert(SurfaceOutput s, fixed3 lightDir, fixed atten)
+      {
+          half NdotL = dot (s.Normal, lightDir);
+          half4 c;
+          c.rgb = s.Albedo * _LightColor0.rgb * (0.4);
+          c.a = s.Alpha;
+          return c;
       }
       ENDCG
     }
