@@ -22,7 +22,7 @@
 
       half4 LightingSimpleLambert(SurfaceOutput s, fixed3 lightDir, fixed atten)
       {
-          half NdotL = dot (s.Normal, lightDir);
+          //half NdotL = dot (s.Normal, lightDir);
           half4 c;
           c.rgb = s.Albedo * _LightColor0.rgb * (0.4);
           c.a = s.Alpha;

@@ -12,11 +12,6 @@ public class RainScript : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        
-    }
-
     public void StartRain()
     {
         particleSystem.Play();

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class UnityChanParticleReaction : MonoBehaviour
 {
+    ParticleSystem ps;
+    [SerializeField]
+    UnityChanScript _UnityChanScript;
+
     void Start()
     {
-        
+        ps = GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -16,6 +20,7 @@ public class UnityChanParticleReaction : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("Collided with " + other.name);
+        Debug.Log("Ouch! A " + other.name);
+        _UnityChanScript.TriggerImpact();
     }
 }

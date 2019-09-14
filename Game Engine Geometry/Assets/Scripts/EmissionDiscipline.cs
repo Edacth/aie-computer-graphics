@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EmissionDiscipline : MonoBehaviour
 {
-    ParticleSystem particleSystem;
-    ParticleSystem.TriggerModule trigger;
+    ParticleSystem ps;
     [SerializeField]
     bool emitterEnabled = false;
     [SerializeField]
@@ -13,8 +12,7 @@ public class EmissionDiscipline : MonoBehaviour
     float timeSinceEmit = 0;
     void Start()
     {
-        particleSystem = GetComponent<ParticleSystem>();
-        trigger = particleSystem.trigger;
+        ps = GetComponent<ParticleSystem>();
 
 
         
@@ -30,11 +28,11 @@ public class EmissionDiscipline : MonoBehaviour
         if (emitterEnabled && timeSinceEmit >= emissionDelay)
         {
             
-            particleSystem.Emit(1);
+            ps.Emit(1);
             timeSinceEmit = 0;
 
-            ParticleSystem.Particle[] particleArray = new ParticleSystem.Particle[particleSystem.particleCount];
-            particleSystem.GetParticles(particleArray);
+            ParticleSystem.Particle[] particleArray = new ParticleSystem.Particle[ps.particleCount];
+            ps.GetParticles(particleArray);
 
             //for (int i = 0; i < particleArray.Length; i++)
             //{
@@ -43,7 +41,7 @@ public class EmissionDiscipline : MonoBehaviour
             //ParticleSystem.Particle[] particleTemplate = new ParticleSystem.Particle[1];
             //particleTemplate[0].startColor = Color.red;
             particleArray[particleArray.Length-1].startColor = Color.red;
-            particleSystem.SetParticles(particleArray, particleArray.Length, 0);
+            ps.SetParticles(particleArray, particleArray.Length, 0);
         }
         timeSinceEmit += Time.deltaTime;
     }
