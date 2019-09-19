@@ -26,7 +26,7 @@ public class DisplayItemScript : MonoBehaviour
 
     void Update()
     {
-        if (rotationEnabled) { itemList[itemIndex].objectReference.transform.Rotate(Vector3.up, 1); }
+        if (rotationEnabled) { itemList[itemIndex].objectReference.transform.Rotate(Vector3.up, 60 * Time.deltaTime); }
     }
 
     public void SetSelectedItem(int _itemIndex)

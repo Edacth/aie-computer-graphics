@@ -26,6 +26,14 @@ public class UIScript : MonoBehaviour
         dropdownObject.captionText.text = dropdownObject.options[0].text; 
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void OnSliderValueChanged(Slider slider)
     {
         _UnityChanScript.SetMovementSpeed(slider.value);
