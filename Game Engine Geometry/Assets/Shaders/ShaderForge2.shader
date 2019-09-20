@@ -1,8 +1,10 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 // Shader created with Shader Forge v1.42 
 // Shader Forge (c) Freya Holmer - http://www.acegikmo.com/shaderforge/
 // Enhanced by Antoine Guillon / Arkham Development - http://www.arkham-development.com/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.42;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6343-OUT,spec-358-OUT,gloss-1813-OUT,normal-5964-RGB,voffset-4652-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_Sin,id:9632,x:32164,y:33129,varname:node_9632,prsc:2|IN-8621-OUT;n:type:ShaderForge.SFN_Append,id:4652,x:32393,y:33252,varname:node_4652,prsc:2|A-9632-OUT,B-5783-OUT,C-9632-OUT;n:type:ShaderForge.SFN_Vector1,id:5783,x:32164,y:33267,varname:node_5783,prsc:2,v1:0;n:type:ShaderForge.SFN_Vector1,id:6462,x:32129,y:33381,varname:node_6462,prsc:2,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:7813,x:31666,y:33225,ptovrint:False,ptlb:Scale,ptin:_Scale,varname:_node_5025_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_Multiply,id:8621,x:31993,y:33129,varname:node_8621,prsc:2|A-7496-OUT,B-7107-T;n:type:ShaderForge.SFN_Time,id:7107,x:31689,y:32915,varname:node_7107,prsc:2;n:type:ShaderForge.SFN_FragmentPosition,id:4009,x:31469,y:33080,varname:node_4009,prsc:2;n:type:ShaderForge.SFN_ObjectPosition,id:6762,x:31469,y:32947,varname:node_6762,prsc:2;n:type:ShaderForge.SFN_Subtract,id:9511,x:31689,y:33055,varname:node_9511,prsc:2|A-6762-X,B-4009-X;n:type:ShaderForge.SFN_Slider,id:7496,x:31640,y:33305,ptovrint:False,ptlb:node_7496,ptin:_node_7496,varname:node_7496,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:1,cur:1,max:2;proporder:5964-6665-7736-358-1813-7813-7496;pass:END;sub:END;*/
+/*SF_DATA;ver:1.42;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6343-OUT,spec-358-OUT,gloss-1813-OUT,normal-5964-RGB,voffset-4652-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_Sin,id:9632,x:31585,y:33046,varname:node_9632,prsc:2|IN-3250-OUT;n:type:ShaderForge.SFN_Append,id:4652,x:32407,y:33150,varname:node_4652,prsc:2|A-6259-R,B-5783-OUT,C-6259-G;n:type:ShaderForge.SFN_Vector1,id:5783,x:32231,y:33174,varname:node_5783,prsc:2,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:7813,x:31587,y:33202,ptovrint:False,ptlb:Extrusion Scale,ptin:_ExtrusionScale,varname:_node_5025_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.5;n:type:ShaderForge.SFN_Multiply,id:8621,x:31244,y:33106,varname:node_8621,prsc:2|A-7107-T,B-1810-OUT;n:type:ShaderForge.SFN_Time,id:7107,x:31030,y:33018,varname:node_7107,prsc:2;n:type:ShaderForge.SFN_FragmentPosition,id:4009,x:30815,y:32921,varname:node_4009,prsc:2;n:type:ShaderForge.SFN_ObjectPosition,id:6762,x:30815,y:32788,varname:node_6762,prsc:2;n:type:ShaderForge.SFN_Subtract,id:9511,x:31011,y:32887,varname:node_9511,prsc:2|A-6762-Y,B-4009-Y;n:type:ShaderForge.SFN_NormalVector,id:9695,x:31818,y:33298,prsc:2,pt:False;n:type:ShaderForge.SFN_Multiply,id:8323,x:31772,y:33064,varname:node_8323,prsc:2|A-9632-OUT,B-7813-OUT;n:type:ShaderForge.SFN_ComponentMask,id:6259,x:32215,y:33241,varname:node_6259,prsc:2,cc1:0,cc2:2,cc3:-1,cc4:-1|IN-8536-OUT;n:type:ShaderForge.SFN_Add,id:2886,x:31937,y:33064,varname:node_2886,prsc:2|A-8323-OUT,B-7813-OUT;n:type:ShaderForge.SFN_Multiply,id:8536,x:32022,y:33241,varname:node_8536,prsc:2|A-2886-OUT,B-9695-OUT;n:type:ShaderForge.SFN_Add,id:3250,x:31412,y:33003,varname:node_3250,prsc:2|A-8042-OUT,B-8621-OUT;n:type:ShaderForge.SFN_Multiply,id:8042,x:31213,y:32887,varname:node_8042,prsc:2|A-5081-OUT,B-9511-OUT;n:type:ShaderForge.SFN_Slider,id:5081,x:30999,y:32710,ptovrint:False,ptlb:Sin Length Scale,ptin:_SinLengthScale,varname:node_5081,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:10;n:type:ShaderForge.SFN_ValueProperty,id:1810,x:31030,y:33193,ptovrint:False,ptlb:Time Scale,ptin:_TimeScale,varname:node_1810,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;proporder:5964-6665-7736-358-1813-7813-5081-1810;pass:END;sub:END;*/
 
 Shader "Custom/ShaderForge2" {
     Properties {
@@ -11,8 +13,9 @@ Shader "Custom/ShaderForge2" {
         _MainTex ("Base Color", 2D) = "white" {}
         _Metallic ("Metallic", Range(0, 1)) = 0
         _Gloss ("Gloss", Range(0, 1)) = 0.8
-        _Scale ("Scale", Float ) = 1
-        _node_7496 ("node_7496", Range(1, 2)) = 1
+        _ExtrusionScale ("Extrusion Scale", Float ) = 0.5
+        _SinLengthScale ("Sin Length Scale", Range(0, 10)) = 0
+        _TimeScale ("Time Scale", Float ) = 1
     }
     SubShader {
         Tags {
@@ -50,7 +53,9 @@ Shader "Custom/ShaderForge2" {
             uniform sampler2D _BumpMap; uniform float4 _BumpMap_ST;
             uniform float _Metallic;
             uniform float _Gloss;
-            uniform float _node_7496;
+            uniform float _ExtrusionScale;
+            uniform float _SinLengthScale;
+            uniform float _TimeScale;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -90,9 +95,10 @@ Shader "Custom/ShaderForge2" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 float4 node_7107 = _Time;
-                float node_9632 = sin((_node_7496*node_7107.g));
-                v.vertex.xyz += float3(node_9632,0.0,node_9632);
+                float2 node_6259 = (((sin(((_SinLengthScale*(objPos.g-mul(unity_ObjectToWorld, v.vertex).g))+(node_7107.g*_TimeScale)))*_ExtrusionScale)+_ExtrusionScale)*v.normal).rb;
+                v.vertex.xyz += float3(node_6259.r,0.0,node_6259.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
@@ -101,6 +107,7 @@ Shader "Custom/ShaderForge2" {
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 i.normalDir = normalize(i.normalDir);
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
@@ -246,7 +253,9 @@ Shader "Custom/ShaderForge2" {
             uniform sampler2D _BumpMap; uniform float4 _BumpMap_ST;
             uniform float _Metallic;
             uniform float _Gloss;
-            uniform float _node_7496;
+            uniform float _ExtrusionScale;
+            uniform float _SinLengthScale;
+            uniform float _TimeScale;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -275,9 +284,10 @@ Shader "Custom/ShaderForge2" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 float4 node_7107 = _Time;
-                float node_9632 = sin((_node_7496*node_7107.g));
-                v.vertex.xyz += float3(node_9632,0.0,node_9632);
+                float2 node_6259 = (((sin(((_SinLengthScale*(objPos.g-mul(unity_ObjectToWorld, v.vertex).g))+(node_7107.g*_TimeScale)))*_ExtrusionScale)+_ExtrusionScale)*v.normal).rb;
+                v.vertex.xyz += float3(node_6259.r,0.0,node_6259.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
@@ -286,6 +296,7 @@ Shader "Custom/ShaderForge2" {
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 i.normalDir = normalize(i.normalDir);
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
@@ -373,9 +384,12 @@ Shader "Custom/ShaderForge2" {
             #pragma multi_compile_fog
             #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu switch vulkan 
             #pragma target 3.0
-            uniform float _node_7496;
+            uniform float _ExtrusionScale;
+            uniform float _SinLengthScale;
+            uniform float _TimeScale;
             struct VertexInput {
                 float4 vertex : POSITION;
+                float3 normal : NORMAL;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
@@ -384,21 +398,27 @@ Shader "Custom/ShaderForge2" {
                 float2 uv1 : TEXCOORD1;
                 float2 uv2 : TEXCOORD2;
                 float4 posWorld : TEXCOORD3;
+                float3 normalDir : TEXCOORD4;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
+                o.normalDir = UnityObjectToWorldNormal(v.normal);
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 float4 node_7107 = _Time;
-                float node_9632 = sin((_node_7496*node_7107.g));
-                v.vertex.xyz += float3(node_9632,0.0,node_9632);
+                float2 node_6259 = (((sin(((_SinLengthScale*(objPos.g-mul(unity_ObjectToWorld, v.vertex).g))+(node_7107.g*_TimeScale)))*_ExtrusionScale)+_ExtrusionScale)*v.normal).rb;
+                v.vertex.xyz += float3(node_6259.r,0.0,node_6259.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.pos = UnityObjectToClipPos( v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
+                i.normalDir = normalize(i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
+                float3 normalDirection = i.normalDir;
                 SHADOW_CASTER_FRAGMENT(i)
             }
             ENDCG
@@ -435,9 +455,12 @@ Shader "Custom/ShaderForge2" {
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
             uniform float _Gloss;
-            uniform float _node_7496;
+            uniform float _ExtrusionScale;
+            uniform float _SinLengthScale;
+            uniform float _TimeScale;
             struct VertexInput {
                 float4 vertex : POSITION;
+                float3 normal : NORMAL;
                 float2 texcoord0 : TEXCOORD0;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
@@ -448,21 +471,27 @@ Shader "Custom/ShaderForge2" {
                 float2 uv1 : TEXCOORD1;
                 float2 uv2 : TEXCOORD2;
                 float4 posWorld : TEXCOORD3;
+                float3 normalDir : TEXCOORD4;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
+                o.normalDir = UnityObjectToWorldNormal(v.normal);
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 float4 node_7107 = _Time;
-                float node_9632 = sin((_node_7496*node_7107.g));
-                v.vertex.xyz += float3(node_9632,0.0,node_9632);
+                float2 node_6259 = (((sin(((_SinLengthScale*(objPos.g-mul(unity_ObjectToWorld, v.vertex).g))+(node_7107.g*_TimeScale)))*_ExtrusionScale)+_ExtrusionScale)*v.normal).rb;
+                v.vertex.xyz += float3(node_6259.r,0.0,node_6259.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.pos = UnityMetaVertexPosition(v.vertex, v.texcoord1.xy, v.texcoord2.xy, unity_LightmapST, unity_DynamicLightmapST );
                 return o;
             }
             float4 frag(VertexOutput i) : SV_Target {
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
+                i.normalDir = normalize(i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
+                float3 normalDirection = i.normalDir;
                 UnityMetaInput o;
                 UNITY_INITIALIZE_OUTPUT( UnityMetaInput, o );
                 

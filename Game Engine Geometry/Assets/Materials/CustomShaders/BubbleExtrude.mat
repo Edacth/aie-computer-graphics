@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShaderForge2
+  m_Name: BubbleExtrude
   m_Shader: {fileID: 4800000, guid: 5283884c1e074234ea63bacf0606a315, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -60,18 +60,23 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _ExtrudeScale: 0
+    - _ExtrusionScale: 0.2
     - _Gloss: 0.8
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LengthScale: 3
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Scale: 1
+    - _Scale: 0.1
+    - _SinLengthScale: 3.95
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TimeScale: 2
     - _UVSec: 0
     - _ZWrite: 1
     - _node_7496: 1
